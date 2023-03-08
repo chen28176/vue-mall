@@ -6,4 +6,5 @@
  * @Description: 
  */
 export * from "./modules/home"
+export * from "./modules/manage"
 

@@ -1,8 +1,8 @@
 /*
  * @Author: '陈28176' 'chen28176@qq.com'
  * @Date: 2023-03-07 14:39:55
- * @LastEditors: '陈28176' 'chen28176@qq.com'
- * @LastEditTime: 2023-03-07 16:18:02
+ * @LastEditors: 86 10976595+chenruiho@user.noreply.gitee.com
+ * @LastEditTime: 2023-03-08 16:38:28
  * @Description: 
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -48,6 +48,15 @@ const router = createRouter({
       // 用户
       path: "/user",
       component: () => import("@/views/user/user.vue")
+    },
+    {
+      // 搜索用户
+      path: "/search",
+      component: () => import("@/views/search/search.vue"),
+      meta: {
+        hideTadBar: true
+      },
+
     },
   ]
 })
