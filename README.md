@@ -1,10 +1,3 @@
-<!--
- * @Author: 86 10976595+chenruiho@user.noreply.gitee.com
- * @Date: 2023-03-07 14:39:55
- * @LastEditors: 86 10976595+chenruiho@user.noreply.gitee.com
- * @LastEditTime: 2023-03-12 00:10:10
- * @Description: 
--->
 # api
 
 [api地址](https://jsonplaceholder.typicode.com)

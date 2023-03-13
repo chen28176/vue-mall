@@ -30,13 +30,6 @@
 
 <script setup>
 
-// import { storeToRefs } from 'pinia';
-// import useHomeStore from '@/stores/modules/home';
-// //* 发送网络请求
-// const homeStore = useHomeStore();
-// homeStore.fetchHotSuggestData()
-// // 进行解构获取 网络数据
-// const { home_data } = storeToRefs(homeStore)
 </script>
 
 <style lang="less" scoped>

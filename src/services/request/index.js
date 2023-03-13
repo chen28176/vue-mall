@@ -14,11 +14,22 @@ class HYRequest {
             baseURL,
             timeout
         }),
+
+        this.instance.interceptors.response.use(
+            res =>{
+            return res
+        },
+        // ......
+        res =>{
+            return err
+        })
+=======
             this.instance.interceptors.response.use(res => {
                 return res
             }, res => {
                 return err
             })
+
 
     }
     request(config) {
