@@ -7,9 +7,12 @@ class HYRequest {
             baseURL,
             timeout
         }),
-        this.instance.interceptors.response.use(res =>{
+        this.instance.interceptors.response.use(
+            res =>{
             return res
-        },res =>{
+        },
+        // ......
+        res =>{
             return err
         })
     }

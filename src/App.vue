@@ -6,15 +6,18 @@
  * @Description: 
 -->
 <template>
+  <!-- <toast v-show="router.meta.hideToast"/> -->
   <div class="app">
     <router-view/>
   </div>
   <!-- !router.meta.hideTadBar判断是否要显示标签 -->
-  <tab-bar v-show="!router.meta.hideTadBar"/>
+  <tab-bar v-show="router.meta.hideTadBar"/>
 </template>
+
 <script setup>
-import { useRoute } from "vue-router";
-const router = useRoute()
+  import { useRoute } from "vue-router";
+  import toast from '@/components/toast/toast.vue'
+  const router = useRoute();
 </script>
 
 <style lang="less" scoped>

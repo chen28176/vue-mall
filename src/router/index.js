@@ -13,31 +13,37 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      redirect: "/login"
+      redirect: "/splash-screen"
+    },
+    {
+      // 闪屏页
+      path: '/splash-screen',
+      component: () => import("@/views/splash-screen.vue"),
     },
     {
       // 登录
       path: "/login",
       component: () => import("@/views/login/login.vue"),
-      // todo 用于隐藏下方标签栏
       meta: {
-        hideTadBar: true
+        hideToast: false
       },
-
     },
     {
       // 注册
-      path: "/logon",
-      component: () => import("@/views/login/logon.vue"),
+      path: "/register",
+      component: () => import("@/views/login/register.vue"),
       meta: {
-        hideTadBar: true
+        hideToast: false
       },
-
     },
     {
       // 首页
       path: "/home",
-      component: () => import("@/views/home/home.vue")
+      component: () => import("@/views/home/home.vue"),
+      // todo 用于隐藏下方标签栏
+      meta: {
+        hideTadBar: true
+      },
     },
     {
       // 管理
