@@ -2,7 +2,7 @@
  * @Author: '陈28176' 'chen28176@qq.com'
  * @Date: 2023-03-07 14:39:55
  * @LastEditors: 86 10976595+chenruiho@user.noreply.gitee.com
- * @LastEditTime: 2023-03-12 00:14:22
+ * @LastEditTime: 2023-03-13 20:08:26
  * @Description: 
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -24,26 +24,24 @@ const router = createRouter({
       // 登录
       path: "/login",
       component: () => import("@/views/login/login.vue"),
-      meta: {
-        hideToast: false
-      },
+            // todo 用于隐藏下方标签栏
+            meta: {
+              hideTadBar: true
+            },
     },
     {
       // 注册
       path: "/register",
       component: () => import("@/views/login/register.vue"),
+      // todo 用于隐藏下方标签栏
       meta: {
-        hideToast: false
+        hideTadBar: true
       },
     },
     {
       // 首页
       path: "/home",
       component: () => import("@/views/home/home.vue"),
-      // todo 用于隐藏下方标签栏
-      meta: {
-        hideTadBar: true
-      },
     },
     {
       // 管理
@@ -53,7 +51,7 @@ const router = createRouter({
     {
       // 用户
       path: "/user",
-      component: () => import("@/views/user/user.vue")
+      component: () => import("@/views/user/user.vue"),
     },
     {
       // 搜索用户
