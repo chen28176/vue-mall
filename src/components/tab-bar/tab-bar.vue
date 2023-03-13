@@ -1,13 +1,13 @@
 <!--
  * @Author: '陈28176' 'chen28176@qq.com'
  * @Date: 2023-02-23 22:10:10
- * @LastEditors: '陈28176' 'chen28176@qq.com'
- * @LastEditTime: 2023-03-07 15:59:22
+ * @LastEditors: 86 10976595+chenruiho@user.noreply.gitee.com
+ * @LastEditTime: 2023-03-07 23:21:25
  * @Description: 
 -->
 <template>
     <div class="tab-bar">
-      <van-tabbar v-model="currentIndex" active-color="#ff9854" route @change="onChange">
+      <van-tabbar v-model="currentIndex" active-color="#ff9854" route >
         <template v-for="(item, index) in tabbarData">
           <van-tabbar-item :to="item.path">
             <template #icon>

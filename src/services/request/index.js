@@ -1,3 +1,10 @@
+/*
+ * @Author: 86 10976595+chenruiho@user.noreply.gitee.com
+ * @Date: 2023-03-07 16:21:51
+ * @LastEditors: 86 10976595+chenruiho@user.noreply.gitee.com
+ * @LastEditTime: 2023-03-12 15:41:54
+ * @Description: 
+ */
 
 import axios from 'axios'
 import { BASE_URL, TIMEOUT } from './config'
@@ -7,6 +14,7 @@ class HYRequest {
             baseURL,
             timeout
         }),
+
         this.instance.interceptors.response.use(
             res =>{
             return res
@@ -15,6 +23,14 @@ class HYRequest {
         res =>{
             return err
         })
+=======
+            this.instance.interceptors.response.use(res => {
+                return res
+            }, res => {
+                return err
+            })
+
+
     }
     request(config) {
         return new Promise((resolve, reject) => {
@@ -28,10 +44,8 @@ class HYRequest {
     get(config) {
         return this.request({ ...config, method: 'get' })
     }
-
     post(config) {
         return this.request({ ...config, method: 'post' })
     }
 }
-
 export default new HYRequest(BASE_URL, TIMEOUT)
